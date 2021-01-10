@@ -1,4 +1,5 @@
 import Header from './Header.js'
+import Home from './Home.js'
 import './App.css';
 
 
@@ -7,8 +8,8 @@ function App() {
     //BEM
     <div className="App">
       <Header/>
-      {/* Header */}
-       {/* Home */}
+      <Home/>
+    
     </div>
   );
 }

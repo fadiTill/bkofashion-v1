@@ -61,7 +61,13 @@ border-radius: 24px;
 }
 
 
-.header_optionCart{
+.header_optionCart {
     display: flex;
     color: #BA55D3;
+}
+
+
+.header_basketCount {
+    margin-left: 10px;
+    margin-right: 10px;
 }
