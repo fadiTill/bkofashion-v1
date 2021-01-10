@@ -1,11 +1,14 @@
-
+import Header from './Header.js'
 import './App.css';
+
 
 function App() {
   return (
     //BEM
     <div className="App">
-      <h1>hello BKO Fashion client</h1>
+      <Header/>
+      {/* Header */}
+       {/* Home */}
     </div>
   );
 }
