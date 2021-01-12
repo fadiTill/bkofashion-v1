@@ -2,11 +2,12 @@
     height: 60px;
     display: flex;
     align-items: center;
-    background-color: #90EE90;
+    background-color:darkseagreen;
     position: sticky;
     top: 0;
     z-index: 100;
 }
+/* background-color: #90EE90; */
 
 .header_logo {
 width: 60px;
@@ -34,7 +35,7 @@ border-radius: 24px;
  .header_searchIcon{
   padding: 5px;
   height: 22px !important; 
-  background-color:#BA55D3;
+  background-color:#90EE90;;
  }
 
  .header_nav{
@@ -47,7 +48,7 @@ border-radius: 24px;
      flex-direction: column;
      margin-left: 10px;
      margin-right: 10px;
-     color: #BA55D3;
+     color: black;
  }
 
  .header_optionLineOne{
@@ -63,10 +64,10 @@ border-radius: 24px;
 
 .header_optionCart {
     display: flex;
-    color: #BA55D3;
+    color: black;
 }
 
-
+/* color: #BA55D3; */
 .header_basketCount {
     margin-left: 10px;
     margin-right: 10px;

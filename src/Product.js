@@ -3,20 +3,20 @@
 import React from 'react'
 import './Product.css'
 
-function Product({title, image, price, rating}) {
+function Product({id, title, image, price, rating}) {
     return (
         <div className="product">
             <div className="product-info">
-                <p>silk pillowcase</p>
+                <p>{title}</p>
                 <p className="product-price" > 
                 <small>$</small>
-                <strong>39.99</strong>
+                <strong>{price}</strong>
                 </p>
                 <div className="product-rating">
-                <p>⭐️</p>
+                {Array(rating).fill().map ((_, i) => (<p>⭐️</p> ))}
                 </div>
             </div>
-                <img  className="product-image" src="images/product.jpg" alt=""/>
+                <img  className="product-image" src={image}  alt=""/>
                 <button> Add to basket</button>
             </div>
        
