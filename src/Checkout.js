@@ -2,6 +2,7 @@
 
 import React from 'react';
 import  "./Checkout.css";
+import Total from "./Total.js";
 
 function Checkout() {
     return (
@@ -17,8 +18,8 @@ function Checkout() {
             {/*BaketItem*/}
                </div>
         </div>
-        <div clasName="chechout-right">
-            <h1>the subtotal</h1>
+        <div className="checkout-right">
+            <Total/>
 
         </div>
     </div>
@@ -26,7 +27,7 @@ function Checkout() {
         
 
        
-    )
+    );
 }
 
 export default Checkout
