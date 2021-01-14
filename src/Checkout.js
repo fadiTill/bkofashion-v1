@@ -3,6 +3,8 @@
 import React from 'react';
 import  "./Checkout.css";
 import Total from "./Total.js";
+import { useStateValue} from "./StateProvider";
+// import ProductCheckout from "./ProductCheckout";
 
 function Checkout() {
     return (
