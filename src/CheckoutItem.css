@@ -1,0 +1,28 @@
+.checkoutitems{
+    display: flex;
+    margin-top: 20;
+    margin-bottom: 20;
+}
+
+.checkoutitems-image{
+    width: 300px;
+    height:300px ; 
+   
+
+}
+
+.checkoutitems-info {
+padding-left: 20px;
+}
+
+.checkoutitems-rating{
+    display: flex;
+}
+
+.checkoutitems > button{
+    background: darkseagreen ;
+    border: 1px solid;
+    margin-top: 10px;
+    border-color: #90EE90 green darkolivegreen;
+    color: black;
+}
