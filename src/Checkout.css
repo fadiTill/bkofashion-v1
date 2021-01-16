@@ -19,3 +19,7 @@
         border-bottom: 1px solid lightgray ;
         color: black;
     }
+
+    .checkout-right{
+        display: flex;
+    }
