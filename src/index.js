@@ -6,6 +6,7 @@ import reportWebVitals from './reportWebVitals';
 //  import * as serviceWorker from './serviceWorker';
 import  reducer, {initialState} from "./Reducer";
 import { StateProvider } from './StateProvider';
+require('dotenv').config()
 
 ReactDOM.render(
   <React.StrictMode>
