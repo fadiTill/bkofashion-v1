@@ -4,6 +4,14 @@ import "./CheckoutItem.css"
 
 function CheckoutItem({id, title, image, price, rating}) {
     const [{basket}, dispatch] = useStateValue();
+
+    const deleteBasket =()=> {
+        dispatch({
+            type: 'DELETE_BASKET',
+            id: id,
+        })
+    }
+    
     return (
         <div className="checkoutitems">
              
@@ -23,7 +31,7 @@ function CheckoutItem({id, title, image, price, rating}) {
            
             <div>  
             
-            <button >Delete</button> 
+            <button  onClick={deleteBasket}>Delete</button> 
            </div>
                  
                  </div>

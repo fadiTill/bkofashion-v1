@@ -5,13 +5,38 @@ import Login from './Login.js';
 import './App.css';
 import {BrowserRouter as Router, Switch, Route}
 from "react-router-dom";
-
-
+import {auth} from "./firebase";
+import {useStateValue} from "./StateProvider";
+import React, {useEffect} from 'react';
 
 
 
 
 function App() {
+  const[{}, dispatch]= useStateValue();
+//  similar to componentdidMount and componentDidUpdate
+  useEffect(() => {
+
+auth.onAuthStateChanged((authUser) => {
+  console.log("the  User is >>>", authUser);
+
+  if (authUser) {
+    
+    dispatch({
+      type:"SET_USER",
+      user: authUser,
+    });
+
+  } else {
+    dispatch({
+      type:"SET_USER",
+      user: null,
+    })
+  
+  }
+
+});
+  }, []);
   return (
     //BEM
     <Router>
