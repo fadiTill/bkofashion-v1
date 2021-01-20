@@ -1,0 +1,79 @@
+.login-logo{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    object-fit: contain;
+    width: 100px;
+    margin-right: auto;
+    margin-left: auto;
+     /* width: 60px;
+object-fit: scale-down;
+margin: 0 20px;
+margin-top: 09px;
+margin-bottom: 09px; */ 
+
+}
+.login{
+    background-color:white;
+    height:100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.fb {
+    
+    background-color: #3B5998;
+    color: white;
+    
+  }
+  
+  .login-container{
+      width: 300px;
+      height: fit-content;
+      display: flex;
+      flex-direction: column;
+      border-radius: 5px;
+      border:1px solid ;
+      padding: 20px;
+  }
+
+  .login-button {
+    background: darkseagreen ;
+    border: 1px solid;
+    margin-top: 10px;
+    border-color: #90EE90 green darkolivegreen;
+    color: black;
+    height: 30px;
+    margin-bottom:10px ;
+}
+
+.signup-button{
+    background: darkseagreen ;
+    border: 1px solid;
+    margin-top: 10px;
+    border-color: #90EE90 green darkolivegreen;
+    color: black;
+    height: 30px;
+    margin-bottom:10px ;
+}
+
+.login-container > h1 {
+    font: 500px;
+    margin-bottom: 20px;
+
+}
+
+.login-container > form > h5 {
+    margin-bottom: 5px;
+}
+
+.login-container > form > input {
+    height: 30px;
+    margin-bottom:10px ;
+    background-color: whitesmoke;
+    width: 98%;
+}
+
+.login-container > p {
+    margin-top: 15px;
+    font-size: 12px;
+}
