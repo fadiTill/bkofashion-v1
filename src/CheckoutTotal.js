@@ -9,7 +9,7 @@ function CheckoutTotal({id, title, price}) {
              
            <div className="checkoutitems-info">
            
-               <p className="checkoutitme_title">{title}</p>
+               <p className="checkoutitems_title">{title}</p>
               
                 <p className="checkoutitems-price" > 
                 <small>$</small>

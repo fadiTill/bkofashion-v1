@@ -3,12 +3,15 @@
 import React from 'react';
 import  "./Checkout.css";
 import Total from "./Total.js";
+import Payment from "./Payment.js";
 import { useStateValue} from "./StateProvider";
 // import { BasketItems } from './Reducer';
  import CheckoutItem from './CheckoutItem';
+import { useHistory } from 'react-router-dom';
 
 
 function Checkout() {
+    const History = useHistory();
     const [{basket}, dispatch] = useStateValue();
     return (
         <div className="checkout">
@@ -32,7 +35,7 @@ function Checkout() {
                ))}
                {/* </div> */}
         </div>
-        <div className="checkout-right">
+        <div  onClick={event => History.push('/payment')}className="checkout-right">
             <Total/>
 
         </div>
