@@ -1,0 +1,15 @@
+.payement {
+    background-color:white ;
+}
+.payement-container{
+    text-align:center;
+    padding: 10px;
+    font-weight: ;
+    background-color: rgb(234,237,237);
+    border-bottom: 1px solid lightgray;
+}
+
+.payement-container > h1 a {
+    text-decoration: none;
+
+}

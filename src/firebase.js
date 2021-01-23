@@ -5,7 +5,7 @@ import firebase from "firebase";
 
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-    apiKey:"",
+    apiKey: process.env.REACT_APP_API_KEY,
     authDomain: "bkofashion-v1.firebaseapp.com",
     projectId: "bkofashion-v1",
     storageBucket: "bkofashion-v1.appspot.com",

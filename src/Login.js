@@ -46,7 +46,7 @@ function Login() {
             </Link>
        
         <div  className="login-container" > 
-        <h1> SingIn  </h1>
+        <h1> SignIn  </h1>
         <form>
         <a href="#" className="fb-btn">
         <i className="fa fa-facebook fa-fw"></i>  Facebook </a>
