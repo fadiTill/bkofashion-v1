@@ -21,6 +21,7 @@ function Payement() {
                 <p> test address street</p>
                 <p> test adress city and state</p>
              </div>
+             </div>
              
                 <div className="payement-part">
                 <div className="payement-header">
@@ -57,7 +58,8 @@ function Payement() {
 
          </div>
             
-        </div>
+    
+    
     )
 }
 
