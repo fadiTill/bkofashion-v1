@@ -8,7 +8,7 @@ import  reducer, {initialState} from "./Reducer";
 import { StateProvider } from './StateProvider';
 require('dotenv').config()
 
-console.log(process.env.REACT_APP_FIREBASE_API_KEY)
+// console.log(process.env.REACT_APP_FIREBASE_API_KEY)
 
 ReactDOM.render(
   

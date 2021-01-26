@@ -1,29 +1,33 @@
-.payement {
+.payment {
     background-color:white ;
 }
-.payement-container > h1{
+.payment-container > h1{
     text-align:center;
     padding: 10px;
-    font-weight:400;
+    font-weight: 400;
     background-color: rgb(234, 237, 237);
     border-bottom: 1px solid lightgray;
 }
 
-.payement-part{
-    margin: 0 19px ;
+.payment-address, .payment-products {
+display: 0.8;
+}
+
+.payment-part{
+    margin: 0 20px ;
     display: flex;
-    padding: 19px;
-    border-bottom: 1px solid lightgray;
+    padding: 21px;
+    border-bottom: 2px solid lightgray;
 
 
 }
 
-.payement-header{
+.payment-header{
     flex: 0.2;
 }
 
 
-.payement-container > h1 a {
+.payment-container > h1 a {
     text-decoration: none;
 
 }
