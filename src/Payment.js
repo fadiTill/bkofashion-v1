@@ -1,11 +1,13 @@
-import React from 'react'
+import React, {useState} from 'react'
 import "./Payment.css"
 import {useStateValue} from "./StateProvider";
 import CheckoutItem from './CheckoutItem';
+import PayPal from './PayPal';
 import {Link} from "react-router-dom"
 
 function Payment() {
     const [{basket, user}, dispatch] = useStateValue();
+    const [checkout, setCheckOut] = useState(false);
     return (
         <div className="payment">
          <div className="payment-container">
@@ -47,10 +49,19 @@ function Payment() {
                     <div className="payment-header"> 
                     <h3> payment method</h3>
                 <div className="payment-infos">
-
-                </div>
+                
+                    {checkout? ( <PayPal/>
+                    ):( 
+                <button onClick={()=>{
+                    setCheckOut(true);
+                }} >
+                Checkout
+                </button>
+)
+            }
+                 </div>
                     </div>
-
+                   
 
                 </div>
 
