@@ -48,11 +48,11 @@ function Payment() {
                 <div className="payment-part">
                     <div className="payment-header"> 
                     <h3> payment method</h3>
-                <div className="payment-infos">
+                <div  id="paypal-button-container" className="payment-infos">
                 
                     {checkout? ( <PayPal/>
                     ):( 
-                <button onClick={()=>{
+                <button   onClick={()=>{
                     setCheckOut(true);
                 }} >
                 Checkout
