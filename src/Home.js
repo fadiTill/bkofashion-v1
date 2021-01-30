@@ -11,41 +11,39 @@ function Home() {
                  <Product 
                  id={1}
                  title="Dark-Blue Mulberry Silk Pillowcase" 
-                 image="images/Dark-blue.png" 
+                 image="images/dark-blue.png" 
                  price={44.99} 
                  rating={5}/>
                  <Product 
                  id={2}
                  title="Dark-Purple Mulberry Silk Pillowcase"
-                 image="images/Dark-Purple.png"
+                 image="images/purple.png"
                  price={44.99} 
                  rating={5} />
-            </div>
-            <div className="home-row">
                  <Product  
                  id={3}
                  title="Coral-Red Mulberry Silk Pillowcase"
-                 image="images/Coral-Red-Principal.jpg"
+                 image="images/pink.png"
                  price={44.99} 
                  rating={5} />
+                  </div>
+            <div className="home-row">
                  <Product 
                  id={4}
                  title="Turquoise Mulberry Silk Pillowcase"
-                 image="images/Turquoise-leaf.png" 
+                 image="images/turquoise.png" 
                  price={44.99} 
                  rating={5}/>
                  <Product 
                  id={5}
                  title="Ivory Mulberry Silk Pillowcase"
-                 image="images/Ivory-8.png"
+                 image="images/ivory.png"
                  price={44.99} 
                  rating={5} />     
-            </div>
-            <div className="home-row">
                  <Product 
                  id={6}
                  title="White-Ivory Mulberry Silk Pillowcase"
-                 image="images/White-Ivory.png"
+                 image="images/ivory-white.png"
                  price={44.99} 
                  rating={5} />  
             </div>
