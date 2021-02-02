@@ -17,7 +17,7 @@ function Header() {
     return (
         <div className="header">
           <Link to="/" >
-          <img className="header_logo"src="images/bkologo.jpg" alt="logo"/> 
+          <img className="header_logo"src="images/logo-bkofashion.jpg" alt="logo"/> 
           </Link>
         <div className="header_search">
           <input className="header_searchInput" type="text"/>

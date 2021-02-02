@@ -37,10 +37,17 @@
     margin-bottom: 15px;
 }
 
-.product > button {
-    background: darkseagreen ;
+/* .product > button {
+    background: #b8860b ;
     border: 1px solid;
     margin-top: 10px;
-    border-color: #90EE90 green darkolivegreen;
+    border-color: burlywood brown darkgoldenrod;
     color: black;
+} */
+.product > button {
+    background: black ;
+    border: 1px solid;
+    margin-top: 10px;
+    border-color: black;
+    color: white;
 }

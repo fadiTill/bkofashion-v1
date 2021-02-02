@@ -2,7 +2,7 @@
     height: 60px;
     display: flex;
     align-items: center;
-    background-color:darkseagreen;
+    background-color:black;
     position: sticky;
     top: 0;
     z-index: 100;
@@ -10,7 +10,7 @@
 /* background-color: #90EE90; */
 
 .header_logo {
-width: 60px;
+width: 70px;
 object-fit: scale-down;
 margin: 0 20px;
 margin-top: 09px;
@@ -35,7 +35,7 @@ border-radius: 24px;
  .header_searchIcon{
   padding: 5px;
   height: 22px !important; 
-  background-color:#90EE90;;
+  background-color:darkgrey
  }
 
  .header_nav{
@@ -48,7 +48,7 @@ border-radius: 24px;
      flex-direction: column;
      margin-left: 10px;
      margin-right: 10px;
-     color: black;
+     color: white;
  }
 
  .header_optionLineOne{
@@ -64,7 +64,7 @@ border-radius: 24px;
 
 .header_optionCart {
     display: flex;
-    color: black;
+    color: white;
 }
 
 /* color: #BA55D3; */
