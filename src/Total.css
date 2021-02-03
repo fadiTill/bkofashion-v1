@@ -22,17 +22,25 @@
 } */
 
 .subtotal > button {
-    background:darkseagreen;
+    background:black ;
     border-radius: 2px;
     width: 100%;
     height: 30px;
     border: 1px solid;
     margin-top: 10px;
-    border-color:#90EE90 green darkolivegreen ;
-    color:#111 ;
+    border-color:black ;
+    color:white ;
 }
 
 
+
+.product > button {
+    background: ;
+    border: 1px solid;
+    margin-top: 10px;
+    border-color: black;
+    color: white;
+}
 
 /* background: darkseagreen ;
 border: 1px solid;
