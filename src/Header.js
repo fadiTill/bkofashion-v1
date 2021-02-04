@@ -1,5 +1,6 @@
 import React from 'react'
 import './Header.css'
+import './Productdetails.css'
 import  SearchIcon  from "@material-ui/icons/Search";
 import ShoppingBasketIcon from '@material-ui/icons/ShoppingBasket';
 import {Link} from "react-router-dom"
@@ -47,6 +48,15 @@ function Header() {
         className="header_optionLineOne">Your</span>
        <span
         className="header_optionLineTwo">BKOPSales </span>
+       </div>
+       
+       <div className="header_nav">
+       <Link to="/productdetails">
+       <span
+        className="header_optionLineOne">Product</span>
+       <span
+        className="header_optionLineTwo">Details</span>
+        </Link>
        </div>
       
       <Link to="/checkout">

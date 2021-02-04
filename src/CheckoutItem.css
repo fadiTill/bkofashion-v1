@@ -19,10 +19,10 @@ padding-left: 20px;
     display: flex;
 }
 
-.checkoutitems > button{
-    background: darkgoldenrod ;
+.checkoutitems .button{
+    background: black ;
     border: 1px solid;
     margin-top: 10px;
-    border-color: burlywood brown darkgoldenrod;
-    color: black;
+    border-color: black;
+    color: white;
 }
