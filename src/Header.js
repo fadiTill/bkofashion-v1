@@ -51,11 +51,14 @@ function Header() {
        </div>
        
        <div className="header_nav">
+       
        <Link to="/productdetails">
+       <div  className="header_option">
        <span
         className="header_optionLineOne">Product</span>
        <span
         className="header_optionLineTwo">Details</span>
+        </div>
         </Link>
        </div>
       
