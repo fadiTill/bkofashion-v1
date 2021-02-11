@@ -49,8 +49,8 @@ function Payment() {
                     <div className="payment-header"> 
                     <h3> payment method</h3>
                 <div  id="paypal-button-container" className="payment-infos">
-                
-                    {checkout? ( <PayPal/>
+              
+                 {checkout? ( <PayPal/>
                     ):( 
                 <button   onClick={()=>{
                     setCheckOut(true);
@@ -58,7 +58,7 @@ function Payment() {
                 Checkout
                 </button>
 )
-            }
+            } 
                  </div>
                     </div>
                    
