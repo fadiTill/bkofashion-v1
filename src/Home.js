@@ -7,7 +7,6 @@ function Home() {
         <div className="home">
             <div className="home-container" >
              <img className="home-image" src="images/bkotaie72.jpg" alt="Red Pillow"/>
-             
              <div className="home-row">
                  <Product 
                  id={1}

@@ -10,10 +10,10 @@
 /* background-color: #90EE90; */
 
 .header_logo {
-width: 110px;
-object-fit: scale-down;
+width: 300px;
+/* object-fit: scale-down; */
 margin: 0 20px;
-margin-top: 09px;
+margin-top: 80px;
 margin-bottom: 09px;
 
 }
@@ -74,3 +74,4 @@ border-radius: 24px;
     margin-left: 10px;
     margin-right: 10px;
 }
+
