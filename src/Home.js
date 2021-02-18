@@ -1,7 +1,8 @@
 import React from 'react'
- import Carousel from './Carousel'
+ import ImgCarousel from './ImgCarousel'
 import './Home.css'
 import Product from './Product'
+import { CarouselData } from './CarouselData'
 
 
 function Home() {
@@ -9,7 +10,7 @@ function Home() {
         <div className="home">
             <div className="home-container" >
               {/* <img className="home-image" src="images/bkotaie72.jpg" alt="Red Pillow"/>  */}
-              <Carousel/> 
+              <ImgCarousel carousels={CarouselData}/> 
              <div className="home-row">
                  <Product 
                  id={1}
