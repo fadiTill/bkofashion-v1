@@ -1,8 +1,44 @@
-.home-image {
+  /* .home-image {
+   
     max-height:475px ;
     width: 100%;
     z-index: -1;
-    margin-bottom: -150px;
+    margin-bottom: -200px;
+    margin-top: -200px;
+
     mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0,));
-    } 
+    }    */
     
+    .slider{
+        position: relative;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .home-image {
+   width: 1000px;
+   height: 600px;
+   border-radius: 10px;
+   margin-top: -200px;
+
+    }
+
+    .Right-arrow {
+        position:absolute ;
+        top:50% ;
+        right: 32px;
+        font-size: 3rem;
+        color: #000;
+        user-select: none;
+    }
+
+    .Left-arrow {
+        position:absolute ;
+        top:50% ;
+        left: 32px;
+        font-size: 3rem;
+        color: #000;
+        user-select: none;
+    }
