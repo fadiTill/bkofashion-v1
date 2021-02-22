@@ -23,3 +23,13 @@
     .checkout-right{
         display: flex;
     }
+    .carousel{
+        opacity: 0;
+        transition-duration: 1s ease;
+    }
+
+    .carousel.active{
+        opacity: 1;
+        transition-duration: 1s;
+        transform: scale(1.00);
+    }

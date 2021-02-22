@@ -5,13 +5,13 @@ import "./ImgCarousel.css"
 
 
 const ImgCarousel  = ({carousels})  => {
-const [current, setCurrent] = useState(0)
-const length = carousels.length
+const [current, setCurrent] = useState(0);
+const length = carousels.length;
 
   const nextCarousel = () => {
   setCurrent(current === length - 1 ? 0 :  current + 1 );
 
-  }
+  };
 
   const prevCarousel = () => {
     setCurrent(current ===  0 ? length - 1 :  current - 1 );
@@ -29,12 +29,12 @@ const length = carousels.length
     return (
         <section className="slider">
            
-            < FaArrowAltCircleLeft  className="Left-arrow " onclick={prevCarousel} />
-            < FaArrowAltCircleRight  className="Right-arrow " onclick={nextCarousel}/>
+            < FaArrowAltCircleLeft  className="Left-arrow " onClick={prevCarousel} />
+            < FaArrowAltCircleRight  className="Right-arrow " onClick={nextCarousel}/>
             {CarouselData.map((carousel, index) => {
                 return (
-                <div className={index === current ? 'carousel active' : 'carousel' } key={index} >
-                {index === current &&(<img  className="home-image" src={carousel.image}  alt="carousel image"/>
+                <div className={index === current ? 'carousel.active' : 'carousel' } key={index} >
+                {index === current &&(<img src={carousel.image}  className="home-image"   alt="carousel image"/>
                     )}
                 
                 </div>
