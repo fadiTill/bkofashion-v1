@@ -10,6 +10,7 @@ from "react-router-dom";
 import {auth} from "./firebase";
 import {useStateValue} from "./StateProvider";
 import React, {useEffect} from 'react';
+import Materials from "./Materials.js";
 
 
 
@@ -51,8 +52,11 @@ auth.onAuthStateChanged((authUser) => {
        <Login/>
       </Route>
       <Route path="/productdetails">
-       <Header/>
        <Productdetails/>
+      </Route>
+      <Route path="/materials">
+       <Productdetails/>
+       <Materials/>
       </Route>
       <Route path="/checkout">
       <Header/>

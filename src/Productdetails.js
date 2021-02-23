@@ -5,6 +5,7 @@ import './Header.css'
 import React from 'react'
 
 function Productdetails() {
+
     
     return (
         <div >
@@ -12,9 +13,15 @@ function Productdetails() {
     <Link to="/">           
    <li><a>Home</a></li>
    </Link>
-  <li><a href="#">Materials</a></li>
-  <li><a href="#">Care</a></li>
-  <li><a href="#">How it is made</a></li>
+   <Link to="/Materials">           
+   <li><a>Materials </a></li>
+   </Link>
+   <Link to="/Care">           
+   <li><a>Care </a></li>
+   </Link>
+   <Link to="/Made">           
+   <li><a>How it is made </a></li>
+   </Link>
 </ul>
 
         </div>
@@ -24,3 +31,4 @@ function Productdetails() {
 }
 
 export default Productdetails
+
