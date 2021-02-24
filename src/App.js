@@ -11,6 +11,9 @@ import {auth} from "./firebase";
 import {useStateValue} from "./StateProvider";
 import React, {useEffect} from 'react';
 import Materials from "./Materials.js";
+import Care from "./Care.js";
+import Made from "./Made.js";
+
 
 
 
@@ -57,6 +60,14 @@ auth.onAuthStateChanged((authUser) => {
       <Route path="/materials">
        <Productdetails/>
        <Materials/>
+      </Route>
+      <Route path="/care">
+      <Productdetails/>
+       <Care/>
+      </Route>
+      <Route path="/Made">
+      <Productdetails/>
+       <Made/>
       </Route>
       <Route path="/checkout">
       <Header/>

@@ -1,13 +1,13 @@
 export  const CarouselData = [
     {
-    image: 'images/bkotaie72.jpg'
+    image: 'images/main-picA.jpg'
 },
   
  {
-     image:'images/image-top.jpg'
+     image:'images/main-picB.jpg'
  },
  {
- image: 'images/White-Ivory10.jpg'
+ image: 'images/main-picC.jpg'
 
  }
 ]
