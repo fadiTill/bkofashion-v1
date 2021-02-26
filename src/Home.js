@@ -1,7 +1,7 @@
 import React from 'react'
  import ImgCarousel from './ImgCarousel'
 import './Home.css'
-// import Product from './Product'
+ import Product from './Product'
 import { CarouselData } from './CarouselData'
 import {ProductData} from './ProductData';
 
@@ -14,9 +14,15 @@ function Home() {
               <ImgCarousel carousels={CarouselData}/> 
               
               <div className="home-row">
-              {ProductData.map((product, index) => {
+              {ProductData.map((prod, index) => {
                   return (
-                  <img src={product.image}  className="image"   alt=" image"/>
+                //   <img src={product.image}  className="image"   alt=" image"/>
+                <Product
+                id={prod.id}
+                title={prod.title}
+                image={prod.image} 
+                price={prod.price} 
+                rating={prod.rating}/>
                   )
               }
               
