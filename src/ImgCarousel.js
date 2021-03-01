@@ -27,7 +27,7 @@ const length = carousels.length;
 
 
     return (
-        <section className="slider">
+        <div className="slider">
            
             < FaArrowAltCircleLeft  className="Left-arrow " onClick={prevCarousel} />
             < FaArrowAltCircleRight  className="Right-arrow " onClick={nextCarousel}/>
@@ -44,7 +44,7 @@ const length = carousels.length;
 
     
             })}
-        </section>
+        </div>
     );
 };
 

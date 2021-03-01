@@ -17,21 +17,44 @@
 }
 
 
- .home-image {
+ /* .home-image {
+margin-top: none;
 max-height:475px ;
 width: 100%;
 z-index: -1;
 margin-bottom: -150px;
 mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0,));
-} 
+}  */
 
 
-.image{
+/* .image{
     width: 100%;
-    max-height: 250px;
+    max-height: 300px;
     object-fit: contain;
     margin-bottom: 15px;
-}
+   
+} */
 
 /* max-height:475px ; */
 
+.header_search {
+     display: flex; 
+    flex: 1;
+    align-items: center;
+    border-radius: 24px;
+    }
+    
+    .header_searchInput{
+        height: 12px;
+        padding: 10px;
+        border: none;
+        width: 100%;
+    }
+
+    .header_searchIcon{
+        padding: 5px;
+        height: 22px !important; 
+        background-color: #B7950B
+      
+       }
+      

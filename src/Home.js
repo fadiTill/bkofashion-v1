@@ -4,14 +4,24 @@ import './Home.css'
  import Product from './Product'
 import { CarouselData } from './CarouselData'
 import {ProductData} from './ProductData';
+import  SearchIcon  from "@material-ui/icons/Search";
 
 
 function Home() {
     return (
+      
+
         <div className="home">
             <div className="home-container" >
               {/* <img className="home-image" src="images/bkotaie72.jpg" alt="Red Pillow"/>  */}
               <ImgCarousel carousels={CarouselData}/> 
+              <div className="header_search">
+             <input className="header_searchInput" type="text" placeholder="Search..."/>
+              <SearchIcon
+              className="header_searchIcon" />
+              </div>  
+              <br>
+              </br>    
               
               <div className="home-row">
               {ProductData.map((prod, index) => {
@@ -68,7 +78,7 @@ function Home() {
               )}
             </div>
         </div>
-                
+        
      </div>
                 
     )
