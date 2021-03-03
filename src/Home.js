@@ -1,4 +1,4 @@
-import React from 'react'
+import {useState} from 'react'
  import ImgCarousel from './ImgCarousel'
 import './Home.css'
  import Product from './Product'
@@ -8,6 +8,8 @@ import  SearchIcon  from "@material-ui/icons/Search";
 
 
 function Home() {
+
+  const[searchProduct, setSearchProduct]= useState('')
     return (
       
 
@@ -16,7 +18,7 @@ function Home() {
               {/* <img className="home-image" src="images/bkotaie72.jpg" alt="Red Pillow"/>  */}
               <ImgCarousel carousels={CarouselData}/> 
               <div className="header_search">
-             <input className="header_searchInput" type="text" placeholder="Search..."/>
+             <input className="header_searchInput" type="text" placeholder="Search..." onChange={event =>{setSearchProduct(event.target.value)}}/>
               <SearchIcon
               className="header_searchIcon" />
               </div>  
@@ -24,9 +26,18 @@ function Home() {
               </br>    
               
               <div className="home-row">
-              {ProductData.map((prod, index) => {
+              {ProductData.filter((prod) =>{
+                if (searchProduct ===""){
+                  return prod 
+
+                } else if (prod.title.toLowerCase().includes(searchProduct.toLowerCase()))
+                return prod
+
+              })
+              .map((prod, index) => {
                   return (
                 //   <img src={product.image}  className="image"   alt=" image"/>
+                
                 <Product
                 id={prod.id}
                 title={prod.title}
