@@ -37,7 +37,7 @@ mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0,));
 
 /* max-height:475px ; */
 
-.header_search {
+/* .header_search {
      display: flex; 
     flex: 1;
     align-items: center;
@@ -49,7 +49,8 @@ mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0,));
         padding: 10px;
         border: none;
         width: 25%;
-        display: center;
+        
+        
     }
 
     .header_searchIcon{
@@ -58,4 +59,4 @@ mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0,));
         background-color: #B7950B
       
        }
-      
+       */

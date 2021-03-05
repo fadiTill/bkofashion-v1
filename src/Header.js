@@ -1,13 +1,15 @@
-import React from 'react'
+// import React from 'react'
+import {useState} from 'react'
 import './Header.css'
 import './Productdetails.css'
-// import  SearchIcon  from "@material-ui/icons/Search";
+ import  SearchIcon  from "@material-ui/icons/Search";
 import ShoppingBasketIcon from '@material-ui/icons/ShoppingBasket';
 import {Link} from "react-router-dom"
 import {useStateValue} from "./StateProvider";
 import { auth } from './firebase';
 
 function Header() {
+   const[searchProduct, setSearchProduct]= useState('')
   const [{basket, user}, dispatch] = useStateValue();
 
   const handleAuthenticaton = () => {
@@ -20,11 +22,11 @@ function Header() {
           <Link to="/" >
           <img className="header_logo"src="images/transparent.png" alt="logo"/> 
           </Link>
-        {/* <div className="header_search">
-          <input className="header_searchInput" type="text" placeholder="Search..."/>
+         <div className="header_search">
+          <input className="header_searchInput" type="text" placeholder="Search..."onChange={event =>{setSearchProduct(event.target.value)}}/>
           <SearchIcon
            className="header_searchIcon" />
-        </div> */}
+        </div> 
 
         <div className="header_nav">
           <Link to={!user &&"/login"}>
