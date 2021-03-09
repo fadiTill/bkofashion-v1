@@ -4,6 +4,7 @@ import React from 'react'
 export default function rating() {
     return (
         <div className="product-rating">
+            {/* //product.rating */}
                  {Array(5).fill().map ((_, i) => (<p>★</p> ))} 
                   {/* <AiFillStar className="staricon"/> */}
                 </div>

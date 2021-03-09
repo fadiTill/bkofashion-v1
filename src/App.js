@@ -13,6 +13,8 @@ import React, {useEffect} from 'react';
 import Materials from "./Materials.js";
 import Care from "./Care.js";
 import Made from "./Made.js";
+import Review from "./Review.js";
+
 
 
 
@@ -76,6 +78,10 @@ auth.onAuthStateChanged((authUser) => {
       <Route path="/payment">
       <Header/>
       <Payment/>
+      </Route>
+       <Route path="/review">
+       <Header/>
+      <Review/>
       </Route>
        <Route path="/">
        <Header/>
