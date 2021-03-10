@@ -1,25 +1,62 @@
 import React from 'react'
-// import Rating from "./Rating"
+ import Rating from "./Rating"
 import {ProductData} from "./ProductData"
 // import Product from "./Product"
 
 export default function Review() {
    
     return (
-        <div>
+        <div className="review-container">
+    <table className="table-striped">
+        <thead>
+        <tr>
+            <th> Product</th>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+            <th> Review</th>
+     </tr>
+     </thead>
+     <tbody>
+         <tr>
+        
         {ProductData.map((prod, index) => {
         return(
-  <h1>{prod.title}</h1>
+<h5>{prod.title}, 
+{/* <tr><Rating/></tr> */}
+</h5>
 
+ 
+     
+  
 //         <Product
 //   title={prod.title}
 //     />
-        )
+        )  
         }
 
         )
     }
-
+    
+     <td></td>
+      <Rating/>
+     <tr></tr>
+     <Rating/>
+     <tr></tr>
+     <Rating/>
+     <tr></tr>
+     <Rating/>
+     <tr></tr>
+     <Rating/> 
+</tr>
+   <div className="stars-outer">
+    <div className="starts-inner"></div>   
+   </div>
+   <span className="number-rating"></span>
+    </tbody>   
+   
+</table>
     </div>
     )} 
     
