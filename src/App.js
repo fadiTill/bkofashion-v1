@@ -14,6 +14,7 @@ import Materials from "./Materials.js";
 import Care from "./Care.js";
 import Made from "./Made.js";
 import Review from "./Review.js";
+import Reviewtest from "./Reviewtest.js";
 
 
 
@@ -82,6 +83,10 @@ auth.onAuthStateChanged((authUser) => {
        <Route path="/review">
        <Header/>
       <Review/>
+      </Route>
+      <Route path="/reviewtest">
+       <Header/>
+       <Reviewtest/>
       </Route>
        <Route path="/">
        <Header/>
