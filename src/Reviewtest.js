@@ -1,6 +1,7 @@
 import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { Table } from 'react-bootstrap';
+import './Reviewtest.css'
 
 
 export default function Reviewtest() {
@@ -19,6 +20,10 @@ export default function Reviewtest() {
   const starsTotal = 5;
 
   //run getRatings when Dom loads
+  document.addEventListener('DOMContentLoaded', getRatings);
+
+
+  
 
    //Get ratings
    const getRatings  = ()  => {
@@ -29,10 +34,13 @@ const starPercentage = (ratings[rating]/starsTotal) * 100;
 
 //Round to nearest 10
 const starPercentageRounded = `${Math.round
-  (starPercentage/10) * 10}%
-}`;
+  (starPercentage/10) * 10}%`;
 
 console.log(starPercentageRounded);
+
+// set width of starts-inner to percentage
+document.querySelector(`.${rating}
+.stars-inner`).style.width = starPercentageRounded;
 
     }
   }
