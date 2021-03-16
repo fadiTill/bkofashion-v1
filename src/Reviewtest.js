@@ -7,48 +7,13 @@ import './Reviewtest.css'
 export default function Reviewtest() {
 
   
-//initial ratings
-  const ratings = {
-    Dark_Blue_Pillowcase:5,
-    Dark_Purple_Pillowcase:4.5,
-    Coral_Red_Pillowcase:4.5,
-    Turquoise_Red_Pillowcase:5,
-    Ivory_Pillowcase:5
-  }
-
-  //Total stars
-  const starsTotal = 5;
-
-  //run getRatings when Dom loads
-  document.addEventListener('DOMContentLoaded', getRatings);
-
 
   
 
-   //Get ratings
-   const getRatings  = ()  => {
-    for (let rating in ratings){
-      console.log(ratings[rating]);
-      //Get precentage 
-const starPercentage = (ratings[rating]/starsTotal) * 100;
-
-//Round to nearest 10
-const starPercentageRounded = `${Math.round
-  (starPercentage/10) * 10}%`;
-
-console.log(starPercentageRounded);
-
-// set width of starts-inner to percentage
-document.querySelector(`.${rating}
-.stars-inner`).style.width = starPercentageRounded;
-
-    }
-  }
+  
 
 
-  document.addEventListener('DOMContentLoaded', getRatings);
-
-
+  
 
  
     return (
@@ -70,9 +35,7 @@ document.querySelector(`.${rating}
     <td>5</td>
     <td>0</td>
     <td>
-      <div className="starts-outer">
-        <div className="stars-inner"></div>
-      </div>
+     
       <span className="number-rating"></span>
     </td>
     </tr>
@@ -82,9 +45,7 @@ document.querySelector(`.${rating}
     <td>5</td>
     <td>0</td>
     <td>
-      <div className="starts-outer">
-        <div className="stars-inner"></div>
-      </div>
+     
       <span className="number-rating"></span>
     </td>
     </tr>
@@ -94,9 +55,7 @@ document.querySelector(`.${rating}
     <td>5</td>
     <td>0</td>
     <td>
-      <div className="starts-outer">
-        <div className="stars-inner"></div>
-      </div>
+     
       <span className="number-rating"></span>
     </td>
     </tr>
@@ -106,9 +65,7 @@ document.querySelector(`.${rating}
     <td>5</td>
     <td>0</td>
     <td>
-      <div className="starts-outer">
-        <div className="stars-inner"></div>
-      </div>
+      
       <span className="number-rating"></span>
     </td>
     </tr>
@@ -118,9 +75,7 @@ document.querySelector(`.${rating}
     <td>5</td>
     <td>0</td>
      <td>
-      <div className="starts-outer">
-        <div className="stars-inner"></div>
-      </div>
+      
       <span className="number-rating"></span>
     </td>
     </tr>
