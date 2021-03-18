@@ -6,7 +6,8 @@ import {FaStar} from "react-icons/fa";
 
 
 export default function Reviewtest() {
-  const [star, setStar] = useState(null)
+  const [stars, setStar] = useState(null)
+  const [hover, setHover]= useState(null)
 
   
  
@@ -26,16 +27,32 @@ export default function Reviewtest() {
     <tr className="product-review">
     <td>1</td>
     <td>Dark-Blue Mulberry Silk Pillowcase</td>
-    <td>  {[...Array(5)].map((star, index) => {
+    <td>  
+      <div>
+      {[...Array(5)].map((star, i) => {
 
-      const starValue = index +1;
+      const starValue = i + 1;
+      // console.log(starValue);
        
       return <label> 
-        <input type="radio" name="rating" value={starValue} onClick={()=> setStar = starValue}/> 
-      < FaStar  className= "start"  color=""/></label>; 
+        <input 
+        type="radio" 
+        name="rating" 
+        value={starValue} 
+        onClick={()=> setStar(starValue)}
+        
+        /> 
+        
+      <FaStar  
+      className="star"  
+      color={starValue <= (hover || stars) ? "black" : "grey"}
+      onMouseEnter={()=> setHover(starValue)}
+      onMouseLeave={() => setHover(null)}
+      />
+      </label>; 
        
       })}
-      
+    </div>  
 </td>
     <td>0</td>
     <td>
