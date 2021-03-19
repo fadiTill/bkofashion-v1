@@ -35,7 +35,7 @@ function Payment() {
             id={item.id} 
             title= {item.title}
             price= {item.price}
-            rating= {item.rating}
+            rating= {<Rating/>}
             image={item.image}
         
             
