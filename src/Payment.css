@@ -9,7 +9,7 @@
     border-bottom: 1px solid lightgray;
 }
 
-.payment-address, .payment-products {
+.payment-address, .payment-products, .payement-infos {
 display: 0.8;
 }
 

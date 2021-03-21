@@ -15,11 +15,13 @@ import Care from "./Care.js";
 import Made from "./Made.js";
 import Review from "./Review.js";
 import Reviewtest from "./Reviewtest.js";
+import {loadStripe} from '@stripe/stripe-js';
+import {Elements} from '@stripe/react-stripe-js';
 
 
 
 
-
+const stripePromise  =  loadStripe('pk_test_51IWoBJKuflhJj1pDudnlwBYeIiFmQjrxwX2QTzXF0T1cUTUmezjblgIn5Luk7w2yVrqBgQH3O8G6rcy5ngMGQ6j000fpsyzm11');
 
 
 
@@ -78,7 +80,9 @@ auth.onAuthStateChanged((authUser) => {
       </Route>
       <Route path="/payment">
       <Header/>
+      <Elements stripe={stripePromise}>
       <Payment/>
+      </Elements>
       </Route>
        <Route path="/review">
        <Header/>
