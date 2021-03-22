@@ -16,18 +16,18 @@ function Payment() {
   const elements = useElements();
 
 
-  const handleSubmit = async (event) => {
-    event.preventDefault();
-    const {error, paymentMethod} = await stripe.createPaymentMethod({
-      type: 'card',
-      card: elements.getElement(CardElement),
-    });
-  };
+  // const handleSubmit = async (event) => {
+  //   event.preventDefault();
+  //   const {error, paymentMethod} = await stripe.createPaymentMethod({
+  //     type: 'card',
+  //     card: elements.getElement(CardElement),
+  //   });
+  // };
 
-// const[error, setError] = useState(null);
-// const [disabled, setDisabled] = useState(true);
-// const [succeeded, setSucceeded] = useState(false);
-// const [processing, setProcessing] = useState("");
+ const[error, setError] = useState(null);
+ const [disabled, setDisabled] = useState(true);
+ const [succeeded, setSucceeded] = useState(false);
+ const [processing, setProcessing] = useState("");
 // const [clientSecret, setClientSecret] = useState(true);
 
 
@@ -46,15 +46,14 @@ function Payment() {
 //    getClientSecret();
 // }, [basket])
 
-
-//    const handleSubmit =  (event) => {
+    const handleSubmit =  (event) => {
 //      event.preventDefault();
 //      setProcessing(true);
 
 //     const payload = await stripe.confirmCardPayement(clientSecret, {
 //      payement_method:{
 //          card: elements.getElement(CardElement)
-//      }
+     }
 
 //      //payement confirmation
 //  }).then({payementIntent})) 
@@ -67,11 +66,11 @@ function Payment() {
 
 //    };
 
-//    const handleChange  = ( event) => {
+    const handleChange  = ( event) => {
 //        setDisabled(event.empty);
 //        setError(event.error ? event.error.message : "");
 
-//    };
+    };
 
 
     return (
@@ -136,14 +135,14 @@ function Payment() {
                     <div className="payment-header"> 
                     <h3> payment method</h3>
                     <div className="payment-infos"></div>
-                     <form onSubmit={handleSubmit}>
-      <CardElement />
-      <button type="submit" disabled={!stripe}>
+                     {/* <form onSubmit={handleSubmit}>
+      <CardElement /> */}
+      {/* <button type="submit" disabled={!stripe}>
         Submit Payement
-      </button>
-    </form> 
-     {/* <form onSubmit={handleSubmit}>
-    <CardElement onChange={handleChange}/> */}
+      </button> */}
+    {/* </form>  */}
+      <form onSubmit={handleSubmit}>
+    <CardElement onChange={handleChange}/> 
 
     <div className='price'> 
     <CurrencyFormat
@@ -158,23 +157,25 @@ function Payment() {
           thousandSeparator={true}
           prefix={"$"}
           /> 
-           </div>
-    {/* <button type="submit" disabled={processing|| disabled|| succeeded}>
+            </div> 
+     <button type="submit" disabled={processing|| disabled|| succeeded}>
       <span>{processing ? <p>Processing</p>: "Buy"}</span>
       </button>
 
    
 
-    {error && <div>{error}</div>}
-    </form> */} 
+     {/*{error && <div>{error}</div>}  */} 
+    </form>
 
 
 
                     </div>
-                    </div>
+                     </div> 
                    
 
                 </div> 
+                
+                
            
 
      
