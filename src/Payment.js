@@ -16,43 +16,53 @@ function Payment() {
   const elements = useElements();
 
 
-  // const handleSubmit = async (event) => {
-  //   event.preventDefault();
-  //   const {error, paymentMethod} = await stripe.createPaymentMethod({
-  //     type: 'card',
-  //     card: elements.getElement(CardElement),
-  //   });
-  // };
+   
 
  const[error, setError] = useState(null);
  const [disabled, setDisabled] = useState(true);
  const [succeeded, setSucceeded] = useState(false);
  const [processing, setProcessing] = useState("");
-// const [clientSecret, setClientSecret] = useState(true);
+ const [clientSecret, setClientSecret] = useState(true);
+ 
 
 
 
-// useEffect(() => {
-//  // using dollard subcunnits * 100
-//    const getClientSecret = async () =>{
-//         const response = await axios({
-//         method: 'post',
-//         url: `/payement/create?total=${getBasketTotal(basket)* 100}`
-//    });
-//    //update basket to charge correct amount
-//    setClientSecret(responde.data.clientSecret)
-// }
 
-//    getClientSecret();
-// }, [basket])
+const handleSubmit = async (event) => {
+    event.preventDefault();
+    setProcessing(true);
+
+    // const payload = await stripe 
+
+ //   const {error, paymentMethod} = await stripe.createPaymentMethod({
+ //     type: 'card',
+ //     card: elements.getElement(CardElement),
+ //   });
+ // };
+
+
+ useEffect(() => {
+  // using dollard subcunnits * 100
+    const getClientSecret = async () =>{
+       
+        const response = await axios({
+         method: 'post',
+         url: `/payement/create?total=${BasketItems(basket) * 100}`
+    });
+    //update basket to charge correct amount
+    setClientSecret(responde.data.clientSecret)
+ }
+
+    getClientSecret();
+ }, [basket])
 
     const handleSubmit =  (event) => {
-//      event.preventDefault();
-//      setProcessing(true);
+      event.preventDefault();
+      setProcessing(true);
 
-//     const payload = await stripe.confirmCardPayement(clientSecret, {
-//      payement_method:{
-//          card: elements.getElement(CardElement)
+     const payload = await stripe.confirmCardPayement(clientSecret, {
+      payement_method: {
+          card: elements.getElement(CardElement)
      }
 
 //      //payement confirmation
@@ -183,6 +193,7 @@ function Payment() {
     
     
     )
+}
 }
 
 export default Payment
