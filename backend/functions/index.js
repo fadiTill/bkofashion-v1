@@ -17,12 +17,15 @@ const stripe = require('stripe')('sk_test_51IWoBJKuflhJj1pDcmBt5VzMX2qLaPEKmVn7i
 const app = express();
 
 // Middlewares allow callback api
-app.use(cors({origin: true}));// cors is  bloking api request with no acces-Control- allow- origin from localhost 3000
+app.use(cors({ origin: true }));// cors is  bloking api request with no acces-Control- allow- origin from localhost 3000
 app.use(express.json());
 
 //API routes
 
 app.get('/', (request, response) => response.status(200).send('hello fadi world'))
+
+// app.get('/fadi', (request, response) => response.status(200).send('hello fadi :) world'))
+
 
 
 app.post("/payements/create", async (request, response)=> {
