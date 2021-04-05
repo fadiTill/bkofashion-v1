@@ -60,6 +60,14 @@ function Header() {
         className="header_optionLineTwo">Reviewtest </span>
        </div>
        </Link>
+       <Link to="/aboutus">
+       <div className="header_option">
+       <span
+        className="header_optionLineOne">About</span>
+       <span
+        className="header_optionLineTwo">Us </span>
+       </div>
+       </Link>
        <div className="header_nav">
        
        <Link to="/productdetails">

@@ -1,36 +1,36 @@
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react'
 import "./Payment.css"
 import {useStateValue} from "./StateProvider";
 import CheckoutItem from './CheckoutItem';
 // import PayPal from './PayPal';
-import {Link} from "react-router-dom"
+import {Link, useHistory} from "react-router-dom"
 import {CardElement,Elements,useStripe,useElements,} from '@stripe/react-stripe-js';
-import CurrencyFormat from "react-currency-format"
-import {BasketItems} from "./Reducer.js"
+import CurrencyFormat from "react-currency-format";
+import {BasketItems} from "./Reducer.js";
+import axios from './axios';
 
 function Payment() {
     const [{basket, user}, dispatch] = useStateValue();
     const [checkout, setCheckOut] = useState(false);
+    const history = useHistory();
 
   const stripe = useStripe();
   const elements = useElements();
 
 
-   
-
+  const [succeeded, setSucceeded] = useState(false);
+  const [processing, setProcessing] = useState("");
  const[error, setError] = useState(null);
  const [disabled, setDisabled] = useState(true);
- const [succeeded, setSucceeded] = useState(false);
- const [processing, setProcessing] = useState("");
  const [clientSecret, setClientSecret] = useState(true);
  
 
 
 
 
-const handleSubmit = async (event) => {
-    event.preventDefault();
-    setProcessing(true);
+// const handleSubmit = async (event) => {
+//     event.preventDefault();
+//     setProcessing(true);
 
     // const payload = await stripe 
 
@@ -47,16 +47,21 @@ const handleSubmit = async (event) => {
        
         const response = await axios({
          method: 'post',
-         url: `/payement/create?total=${BasketItems(basket) * 100}`
+         url: `/payements/create?total=${BasketItems(basket) * 100}`
     });
     //update basket to charge correct amount
-    setClientSecret(responde.data.clientSecret)
+    setClientSecret(response.data.clientSecret)
  }
 
     getClientSecret();
  }, [basket])
 
-    const handleSubmit =  (event) => {
+ console.log('SECRET IS >>>', clientSecret)
+
+
+
+
+    const handleSubmit = async (event) => {
       event.preventDefault();
       setProcessing(true);
 
@@ -66,19 +71,22 @@ const handleSubmit = async (event) => {
      }
 
 //      //payement confirmation
-//  }).then({payementIntent})) 
-//   setSucceeded(true);
-//   setError(null)
-//   setProcessing(false)
+  }).then(({payementIntent}) =>  {
+   setSucceeded(true);
+   setError(null)
+   setProcessing(false)
 
-//   history.replaceState('/orders')
+   history.replace('/orders')
 
 
-//    };
+    })
+}
 
-    const handleChange  = ( event) => {
-//        setDisabled(event.empty);
-//        setError(event.error ? event.error.message : "");
+
+
+    const handleChange  = (event) => {
+        setDisabled(event.empty);
+        setError(event.error ? event.error.message : "");
 
     };
 
@@ -107,6 +115,8 @@ const handleSubmit = async (event) => {
                 <div className="payment-products" >
                 {basket.map (item => (
             <CheckoutItem
+            //add key to fix error uniq key prop
+            key={item.id}
             id={item.id} 
             title= {item.title}
             price= {item.price}
@@ -174,7 +184,7 @@ const handleSubmit = async (event) => {
 
    
 
-     {/*{error && <div>{error}</div>}  */} 
+     {error && <div>{error}</div>}  
     </form>
 
 
@@ -194,6 +204,6 @@ const handleSubmit = async (event) => {
     
     )
 }
-}
+// }
 
 export default Payment

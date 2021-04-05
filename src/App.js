@@ -4,6 +4,7 @@ import Payment from './Payment.js';
 import Home from './Home.js';
 import Login from './Login.js';
 import Productdetails from './Productdetails.js';
+import Aboutus from './Aboutus.js';
 import './App.css';
 import {BrowserRouter as Router, Switch, Route}
 from "react-router-dom";
@@ -73,6 +74,9 @@ auth.onAuthStateChanged((authUser) => {
       <Route path="/Made">
       <Productdetails/>
        <Made/>
+      </Route>
+      <Route path="/aboutus">
+       <Aboutus/>
       </Route>
       <Route path="/checkout">
       <Header/>
