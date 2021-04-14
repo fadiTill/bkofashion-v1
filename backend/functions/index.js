@@ -1,6 +1,6 @@
-const functions = require("firebase-functions");
-const express = require("express")
-const cors = require("cors")
+const functions = require('firebase-functions');
+const express = require("express");
+const cors = require("cors");
 const stripe = require('stripe')('sk_test_51IWoBJKuflhJj1pDcmBt5VzMX2qLaPEKmVn7i0RrCdlZ3PsWMr90he5ZbQWWOeVIPTVtjUeZpj1PsFOrlbXMPoKM00nuXUvRLv')
 
 
@@ -17,9 +17,9 @@ const stripe = require('stripe')('sk_test_51IWoBJKuflhJj1pDcmBt5VzMX2qLaPEKmVn7i
 const app = express();
 
 // Middlewares allow callback api
-// app.use(cors({ origin: true }));
+ app.use(cors({ origin: true }));
 // cors is  bloking api request with no acces-Control- allow- origin from localhost 3000
-app.use(cors())
+// app.use(cors())
 app.use(express.json());
 
 //API routes
@@ -55,7 +55,7 @@ response.status(201).send({
 exports.api = functions.https.onRequest(app)
 
 
-
+// npm install -g install-peerdeps
 
 
 
