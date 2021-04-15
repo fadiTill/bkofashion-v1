@@ -51,12 +51,18 @@ function Payment() {
     });
     //update basket to charge correct amount
     setClientSecret(response.data.clientSecret)
+    console.log('response data>>>',response.data.clientSecret)
+    // not geting the data 
  }
 
     getClientSecret();
+     console.log('get',getClientSecret())
  }, [basket])
+ 
+
 
  console.log('SECRET IS >>>', clientSecret)
+ console.log(clientSecret)
 
 
 

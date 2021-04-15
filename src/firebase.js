@@ -1,4 +1,5 @@
-
+//npm install -g firebase-tools
+// npm run build (when making change)
 
  import firebase from "firebase";
 // require('dotenv').config()
