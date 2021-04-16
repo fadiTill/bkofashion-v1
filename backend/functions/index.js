@@ -24,17 +24,14 @@ app.use(express.json());
 
 //API routes
 
-app.get('/', (request, response) => response.status(200).send('hello fadi world'))
+app.get("/", (request, response) => response.status(200).send('hello fadi world'))
 
 // app.get('/fadi', (request, response) => response.status(200).send('hello fadi :) world'))
 
 
 
-app.post("/payements/create", async (request, response)=> {
+app.post("/payements/create", async (request, response) => {
     const total = request.query.total;
-
-
-
 console.log('payement recieved yay!>> amout:', total);
 
 
