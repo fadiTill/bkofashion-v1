@@ -30,19 +30,19 @@ app.get("/", (request, response) => response.status(200).send('hello fadi world'
 
 
 
-app.post("/payements/create", async (request, response) => {
+app.post("/payments/create", async (request, response) => {
     const total = request.query.total;
-console.log('payement recieved yay!>> amout:', total);
+console.log('payment recieved yay!>> amout:', total);
 
 
-const payementIntent = await stripe.payementIntents.create({
+const paymentIntent = await stripe.paymentIntents.create({
     amount: total,
     currency: "usd",
 
 });
 
 response.status(201).send({
-    clientSecret: payementIntent.client_secret,
+    clientSecret: paymentIntent.client_secret,
 
 });
 });
