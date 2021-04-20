@@ -1,17 +1,18 @@
 import React, {useState, useEffect} from 'react'
-import "./Payment.css"
+import "./Payment.css";
 import {useStateValue} from "./StateProvider";
 import CheckoutItem from './CheckoutItem';
 // import PayPal from './PayPal';
 import {Link, useHistory} from "react-router-dom"
-import {CardElement,Elements,useStripe,useElements,} from '@stripe/react-stripe-js';
+import {CardElement,useStripe,useElements,} from '@stripe/react-stripe-js';
 import CurrencyFormat from "react-currency-format";
 import {BasketItems} from "./Reducer.js";
 import axios from './axios';
+import {db} from './firebase.js';
 
 function Payment() {
     const [{basket, user}, dispatch] = useStateValue();
-    const [checkout, setCheckOut] = useState(false);
+    // const [checkout, setCheckOut] = useState(false);
     const history = useHistory();
 
   const stripe = useStripe();
@@ -20,9 +21,11 @@ function Payment() {
 
   const [succeeded, setSucceeded] = useState(false);
   const [processing, setProcessing] = useState("");
+
  const[error, setError] = useState(null);
  const [disabled, setDisabled] = useState(true);
  const [clientSecret, setClientSecret] = useState(true);
+ 
  
 
 
@@ -43,15 +46,15 @@ function Payment() {
 
  useEffect(() => {
   // using dollard subcunnits * 100
-    const getClientSecret = async () =>{
+    const getClientSecret = async () => {
        
         const response = await axios({
          method: 'post',
-         url: `/payements/create?total=${BasketItems(basket) * 100}`
+         url: `/payments/create?total=${BasketItems(basket) * 100}`
     });
     //update basket to charge correct amount
     setClientSecret(response.data.clientSecret)
-    console.log('response data>>>',response.data.clientSecret)
+    // console.log('response data>>>',  response.data.clientSecret)
     // not geting the data 
  }
 
@@ -62,7 +65,8 @@ function Payment() {
 
 
  console.log('SECRET IS >>>', clientSecret)
- console.log(clientSecret)
+//  console.log(clientSecret)
+console.log('user>>>>',user)
 
 
 
@@ -71,16 +75,37 @@ function Payment() {
       event.preventDefault();
       setProcessing(true);
 
-     const payload = await stripe.confirmCardPayement(clientSecret, {
-      payement_method: {
+     const payload = await stripe.confirmCardPayment(clientSecret, {
+      payment_method: {
           card: elements.getElement(CardElement)
      }
 
 //      //payement confirmation
-  }).then(({payementIntent}) =>  {
+  }).then(({paymentIntent}) =>  {
+
+
+    db
+   .collection('users')
+   .doc(user?.uid)
+   .collection('orders')
+   .doc(paymentIntent.id)
+   .set({
+       basket: basket,
+       amount: paymentIntent.amount,
+       created: paymentIntent.created,
+
+   })
+
+
+
    setSucceeded(true);
    setError(null)
    setProcessing(false)
+
+   
+   dispatch({
+       type: 'EMPTY_BASKET'
+   })
 
    history.replace('/orders')
 
@@ -122,7 +147,7 @@ function Payment() {
                 {basket.map (item => (
             <CheckoutItem
             //add key to fix error uniq key prop
-            key={item.id}
+            // key={item.id}
             id={item.id} 
             title= {item.title}
             price= {item.price}
@@ -184,7 +209,7 @@ function Payment() {
           prefix={"$"}
           /> 
             </div> 
-     <button type="submit" disabled={processing|| disabled|| succeeded}>
+     <button type="submit" disabled={processing || disabled || succeeded}>
       <span>{processing ? <p>Processing</p>: "Buy"}</span>
       </button>
 

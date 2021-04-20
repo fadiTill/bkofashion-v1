@@ -15,6 +15,8 @@ const Reducer = (state, action) => {
             basket: [...state.basket, action.item],
         };
 
+        // case "EMPTY_BASKET":
+
 
         case"EMPTY_BASKET":
         return {

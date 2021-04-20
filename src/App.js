@@ -3,6 +3,7 @@ import Header from './Header.js';
 import Payment from './Payment.js';
 import Home from './Home.js';
 import Login from './Login.js';
+import Orders from './Orders.js';
 import Productdetails from './Productdetails.js';
 import Aboutus from './Aboutus.js';
 import './App.css';
@@ -56,6 +57,9 @@ auth.onAuthStateChanged((authUser) => {
     <Router>
     <div className="App">
       <Switch>
+       <Route path="/orders">
+       <Orders/>
+       </Route>
        <Route path="/login">
        <h1>login</h1>
        <Login/>
