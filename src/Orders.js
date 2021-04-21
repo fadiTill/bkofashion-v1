@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { db } from './firebase';
 import './Orders.css'
 import{useStateValue} from "./StateProvider"
+import Order from './Order.js'
 
 function Orders() {
     const [{basket, user}, dispatch] = useStateValue();
