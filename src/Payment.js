@@ -134,8 +134,8 @@ console.log('user>>>>',user)
             <h4> Delivery Address</h4>
             </div>
             <div className="payment-address">
-                <p> {user?.email}</p>
-                <p> test address street</p>
+                 <p> {user?.email}</p> 
+                <p> {user?.address}</p>
                 <p> test address city and state</p>
              </div>
              </div>
@@ -209,7 +209,7 @@ console.log('user>>>>',user)
           prefix={"$"}
           /> 
             </div> 
-     <button type="submit" disabled={processing || disabled || succeeded}>
+     <button className="button-buy" type="submit" disabled={processing || disabled || succeeded}>
       <span>{processing ? <p>Processing</p>: "Buy"}</span>
       </button>
 

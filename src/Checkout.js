@@ -14,6 +14,7 @@ function Checkout() {
     const History = useHistory();
     const [{basket}, dispatch] = useStateValue();
     return (
+        
         <div className="checkout">
             <div clasName="chechout-left">
            {/* <img className="checkout-img"src="images/image-top.jpg" alt=""/>  */}

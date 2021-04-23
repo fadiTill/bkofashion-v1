@@ -31,3 +31,12 @@ display: 0.8;
     text-decoration: none;
 
 }
+
+
+.button-buy{
+    background: black ;
+    border: 1px solid;
+    margin-top: 10px;
+    border-color: black;
+    color: white;
+}

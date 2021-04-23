@@ -58,10 +58,11 @@ auth.onAuthStateChanged((authUser) => {
     <div className="App">
       <Switch>
        <Route path="/orders">
+       <Header/>
        <Orders/>
        </Route>
        <Route path="/login">
-       <h1>login</h1>
+       {/* <h1>login</h1> */}
        <Login/>
       </Route>
       <Route path="/productdetails">
